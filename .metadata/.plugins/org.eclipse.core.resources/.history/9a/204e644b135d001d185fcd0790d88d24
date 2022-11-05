@@ -1,0 +1,5 @@
+package simplilearn.config;
+
+public class AppConfig {
+
+}

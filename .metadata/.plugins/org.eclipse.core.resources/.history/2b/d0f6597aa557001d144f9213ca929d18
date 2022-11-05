@@ -1,0 +1,20 @@
+package simplilearn;
+
+import java.util.List;
+
+import simplilearn.model.Todo;
+import simplilearn.services.TodoService;
+import simplilearn.services.TodoServiceImpl;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		TodoService theTodoService = new TodoServiceImpl();
+		
+		// find all todo's
+		List<Todo> todosList = theTodoService.findAll();
+
+	}
+
+}

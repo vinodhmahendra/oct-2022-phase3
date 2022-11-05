@@ -1,0 +1,17 @@
+package simplilearn.model;
+
+import java.util.Date;
+
+public class Todo {
+
+	private long id;
+	private String username;
+	private String description;
+	private Date targetDate;
+	private boolean isDone;
+	
+	
+	protected Todo() {
+		super(); //default
+	}
+}

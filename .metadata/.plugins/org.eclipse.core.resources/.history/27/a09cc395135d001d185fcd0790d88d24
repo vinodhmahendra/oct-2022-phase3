@@ -1,0 +1,22 @@
+package simplilearn.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import simplilearn.repository.TodoRepository;
+import simplilearn.services.TodoService;
+
+@Configuration
+public class AppConfig {
+
+	@Bean
+	public TodoRepository todoRepository() {
+		return null;
+	}
+	
+	@Bean
+	public TodoService todoService() {
+		return null;
+	}
+	
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- configure the repository bean id="interface name(1st letter is lower case)"
+	class = "fully qualified classname"
+	 -->
+	<bean id="todoRepository" class="simplilearn.repository.TodoRepositoryImpl">
+		<!-- collaborators and configuration for this todoRepository go here -->
+	</bean>
+	
+	<!--  configure the service bean -->
+	<bean id="" class=""></bean>
+</beans>
