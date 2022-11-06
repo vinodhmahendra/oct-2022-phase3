@@ -1,14 +1,19 @@
 package simplilearn.repository;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
 
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.stereotype.Repository;
 
 import simplilearn.model.Todo;
@@ -55,14 +60,37 @@ public class JdbcTodoRepositoryImpl implements TodoRepository {
 
 	@Override
 	public Todo save(Todo theTodo) {
-		// TODO Auto-generated method stub
+		String sql = "insert into todos (description,username,isDone) value (?,?,?)";
+//		jdbcTemplate.update(sql, theTodo.getDescription(),theTodo.getUsername(),theTodo.isDone());
+		
+		GeneratedKeyHolder holder = new GeneratedKeyHolder();
+		
+		jdbcTemplate.update(new PreparedStatementCreator() {
+			
+			@Override
+			public PreparedStatement createPreparedStatement(Connection con) throws SQLException {
+				PreparedStatement statement = con.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
+				statement.setString(1, theTodo.getDescription());
+				statement.setString(2, theTodo.getUsername());
+				statement.setBoolean(3, theTodo.isDone());
+				return statement;
+			}
+		},holder);
+		
+		long primaryKey = holder.getKey().longValue();
+		System.out.println("ID " + primaryKey);
+
 		return null;
 	}
 
 	@Override
 	public Todo deleteById(long theId) {
-		// TODO Auto-generated method stub
-		return null;
+		Todo theTodo = findById(theId);
+		
+		String sql = "delete from todos where id = ?";
+		jdbcTemplate.update(sql, theId);
+		
+		return theTodo;
 	}
 	
 	

@@ -34,8 +34,8 @@ public class Program {
 		
 		
 		//test save method
-		Todo saveTodo = theTodoService.save(new Todo(-1, "vinodh", "Learn to skate", new Date(), false));
-		System.out.println("----->" + saveTodo.getDescription());
+		theTodoService.save(new Todo(-1, "vinodh", "Learn to skate", new Date(), false));
+		
 		
 		//test deleteById method
 		Todo deleteByIdTodo = theTodoService.deleteById(1);
