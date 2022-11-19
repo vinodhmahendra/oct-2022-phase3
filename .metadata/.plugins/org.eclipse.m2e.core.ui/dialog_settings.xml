@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\trainer\phase3\weekend\08-simple-spring-web-app\src\main"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -46,9 +47,11 @@
 			<item value="com.simplilearn"/>
 		</list>
 		<list key="name">
+			<item value="08-simple-spring-web-app"/>
 			<item value="01-todos-app-without-spring"/>
 		</list>
 		<list key="artifactId">
+			<item value="08-simple-spring-web-app"/>
 			<item value="01-todos-app-without-spring"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -60,6 +63,8 @@
 			<item value="[name]"/>
 		</list>
 		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+			<item value="1.0"/>
 			<item value="1.0-RELEASE"/>
 		</list>
 	</section>
