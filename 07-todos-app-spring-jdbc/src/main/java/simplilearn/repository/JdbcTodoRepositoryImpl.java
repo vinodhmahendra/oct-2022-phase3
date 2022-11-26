@@ -80,7 +80,7 @@ public class JdbcTodoRepositoryImpl implements TodoRepository {
 		long primaryKey = holder.getKey().longValue();
 		System.out.println("ID " + primaryKey);
 
-		return null;
+		return findById(primaryKey);
 	}
 
 	@Override
