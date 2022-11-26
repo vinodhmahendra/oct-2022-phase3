@@ -1,22 +1,16 @@
 INDEX VERSION 1.131+C:\trainer\phase3\weekend\.metadata\.plugins\org.eclipse.jdt.core
 1084407519.index
-828650314.index
-3822220308.index
+3911798005.index
 3019233177.index
 1620583057.index
-1971210620.index
-3859853211.index
-1427274564.index
 2448446305.index
 2081454615.index
-421312032.index
 2735099003.index
 1695347601.index
 2357073554.index
 1269502686.index
 1227964544.index
 1561748811.index
-3560230652.index
 2750694401.index
 1182187477.index
 2272503744.index
@@ -24,5 +18,3 @@ INDEX VERSION 1.131+C:\trainer\phase3\weekend\.metadata\.plugins\org.eclipse.jdt
 1116067547.index
 1865797976.index
 3785286863.index
-1733906178.index
-2488718.index
