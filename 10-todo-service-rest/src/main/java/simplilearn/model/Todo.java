@@ -2,10 +2,17 @@ package simplilearn.model;
 
 import java.util.Date;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
 public class Todo {
 
 	private long id;
+	
+	@NotEmpty @Size ( min = 2, message = "the username should have more than 2 characters")
 	private String username;
+	
+	@NotEmpty @Size ( min = 5, message = "the description should have more than 5 characters")
 	private String description;
 	private Date targetDate;
 	private boolean isDone;
