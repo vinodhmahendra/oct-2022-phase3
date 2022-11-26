@@ -3,6 +3,8 @@ package simplilearn.resources;
 import java.net.URI;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -47,7 +49,7 @@ public class TodoResource {
 	
 	
 	@PostMapping( path = "/users/{username}/todos")
-	public ResponseEntity createTodo (@PathVariable String username , @RequestBody Todo theTodo) {
+	public ResponseEntity createTodo (@PathVariable String username ,@Valid @RequestBody Todo theTodo) {
 		
 		Todo saveTodo = todoService.save(theTodo);
 		

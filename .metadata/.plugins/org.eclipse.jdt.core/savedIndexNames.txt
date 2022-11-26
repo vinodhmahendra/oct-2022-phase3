@@ -26,7 +26,6 @@ INDEX VERSION 1.131+C:\trainer\phase3\weekend\.metadata\.plugins\org.eclipse.jdt
 1865797976.index
 375931956.index
 1834237150.index
-1084407519.index
 292207472.index
 2357073554.index
 3920795319.index

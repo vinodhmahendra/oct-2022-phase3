@@ -2,8 +2,10 @@ package simplilearn.errors;
 
 import java.util.Date;
 
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
@@ -34,6 +36,16 @@ public class CustomizedTodoErrorMessageHandler extends ResponseEntityExceptionHa
 		
 		return new ResponseEntity(todoErrorResponse, HttpStatus.NOT_FOUND);
 		
+	}
+	
+	@Override
+	protected ResponseEntity handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
+			HttpHeaders headers, HttpStatus status, WebRequest request) {
+	
+		TodoErrorResponse todoErrorResponse =
+				new TodoErrorResponse(new Date(), "invalid information", ex.getBindingResult().toString());
+		
+		return new ResponseEntity(todoErrorResponse, HttpStatus.BAD_REQUEST);
 	}
 
 }
