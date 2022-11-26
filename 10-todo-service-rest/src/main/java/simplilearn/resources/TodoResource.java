@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import simplilearn.errors.TodoNotFoundException;
 import simplilearn.model.Todo;
 import simplilearn.services.TodoService;
 
