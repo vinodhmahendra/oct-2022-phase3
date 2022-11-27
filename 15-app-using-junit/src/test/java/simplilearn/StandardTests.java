@@ -3,6 +3,8 @@ package simplilearn;
 import static org.junit.Assert.fail;
 import static org.junit.Assume.assumeTrue;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
@@ -20,6 +22,15 @@ public class StandardTests {
 		System.out.println("Executed Before Each @Test Method");
 	}	
 	
+	@AfterEach
+	void tearDown() {
+		System.out.println("Executed After Each @Test Method");
+	}	
+	
+	@AfterAll
+	static void tearDownAll() {
+		System.out.println("Exceuted After All @Test Methods");
+	}
 	
 	@Test
 	void abortedTest() {
